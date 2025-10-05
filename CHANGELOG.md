@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - URL extraction and threat detection
 - HTML sanitization and risk scoring
 
-## [0.3.0] - 2024-10-05
+## [0.3.0] - 2025-10-05
 
 ### Added - Layer 3: Email Parsing
 - MIME parser for email headers, body, and attachments
@@ -29,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - quickstart.sh script for automated setup
 - MIT LICENSE added
 
-## [0.2.0] - 2024-10-04
+## [0.2.0] - 2025-10-04
 
 ### Added - Layer 2: API Foundation
 - FastAPI application with auto-generated documentation
@@ -47,7 +47,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Feature model for extracted features
 - Alembic migrations system
 
-## [0.1.0] - 2024-10-03
+## [0.1.0] - 2025-10-03
 
 ### Added - Layer 1: Infrastructure
 - Docker Compose orchestration
