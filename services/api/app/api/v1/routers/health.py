@@ -42,16 +42,23 @@ async def health_check_database(db: AsyncSession = Depends(get_db)):
 @router.get("/rspamd")
 async def health_check_rspamd():
     """Check Rspamd connectivity."""
+    from app.integrations.rspamd_client import RspamdClient
+    
     try:
-        async with httpx.AsyncClient() as client:
-            response = await client.get(
-                f"http://{settings.RSPAMD_HOST}:{settings.RSPAMD_PORT}/ping",
-                timeout=5.0
-            )
+        client = RspamdClient()
+        is_alive = await client.ping()
+        
+        if is_alive:
             return {
-                "status": "healthy" if response.status_code == 200 else "unhealthy",
+                "status": "healthy",
                 "service": "Rspamd",
-                "message": response.text
+                "message": "Rspamd is responding"
+            }
+        else:
+            return {
+                "status": "unhealthy",
+                "service": "Rspamd",
+                "error": "Rspamd not responding to ping"
             }
     except Exception as e:
         return {
@@ -59,6 +66,7 @@ async def health_check_rspamd():
             "service": "Rspamd",
             "error": str(e)
         }
+
 
 
 @router.get("/all")

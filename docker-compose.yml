@@ -48,7 +48,7 @@ services:
       - "11333:11333"            # Normal worker port
     volumes:
       - ./infra/rspamd/local.d:/etc/rspamd/local.d
-      - ./infra/rspamd/workers.d:/etc/rspamd/override.d/worker-controller.inc
+      - ./infra/rspamd/local.d/worker-controller.inc:/etc/rspamd/local.d/worker-controller.inc
       - rspamd_data:/var/lib/rspamd
     environment:
       - RSPAMD_PASSWORD=${RSPAMD_CONTROLLER_PASSWORD}
