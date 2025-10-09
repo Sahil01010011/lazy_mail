@@ -102,7 +102,7 @@ async def root():
     """Root endpoint - API information."""
     return {
         "name": "LazyMail Phishing Detection API",
-        "version": "1.0.0",
+        "version": "0.3.0",
         "status": "running",
         "docs": "/docs",
         "health": "/api/v1/health/all"
