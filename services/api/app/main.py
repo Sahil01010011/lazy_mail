@@ -46,17 +46,22 @@ app = FastAPI(
     description="""
     Advanced email security platform with multi-layer phishing detection.
     
-    ## Features
-    * **Multi-layer detection**: Rspamd + Stylometry + ML
-    * **Gmail/IMAP integration**: Automatic email ingestion
-    * **Real-time analysis**: Async processing with Celery workers
-    * **Explainable AI**: Full visibility into detection decisions
-    * **Automated actions**: Quarantine, label, alert on detection
+    ## Current Features (v0.3.0 - Layer 3)
+    * **Complete email parsing**: MIME parsing with header/body/attachment extraction
+    * **Authentication verification**: SPF/DKIM/DMARC checks
+    * **URL analysis**: Threat detection, homograph attacks, suspicious TLDs
+    * **HTML sanitization**: Risk scoring and dangerous element removal
+    * **Database storage**: Messages, verdicts, and features for ML
     
-    ## Authentication
-    Coming soon: JWT token-based authentication
+    ## Coming Soon (Layers 4-5)
+    * **ML classification**: Phishing and spam detection models
+    * **Rspamd integration**: Advanced spam scoring
+    * **Stylometry analysis**: BEC detection
+    * **Automated ingestion**: Gmail/IMAP integration
+    * **Real-time processing**: Celery workers
+    * **Authentication**: JWT token-based authentication
     """,
-    version="1.0.0",
+    version="0.3.0",
     docs_url="/docs",
     redoc_url="/redoc",
     openapi_url="/openapi.json",
