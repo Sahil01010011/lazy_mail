@@ -58,7 +58,7 @@ LazyMail follows a layered architecture approach, building complexity incrementa
 └─────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────┐
-│                 Layer 4: Analysis Pipeline ⏳                │
+│                 Layer 4: Analysis Pipeline ✅ [CURRENT]     │
 │  - Rspamd integration for spam scoring                      │
 │  - ML-based phishing classification                         │
 │  - Stylometry analysis for BEC detection                    │
@@ -66,7 +66,7 @@ LazyMail follows a layered architecture approach, building complexity incrementa
 └─────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────┐
-│              Layer 3: Email Parsing ✅ [CURRENT]             │
+│              Layer 3: Email Parsing ✅                      │
 │  ✓ Complete MIME parsing (headers, body, attachments)       │
 │  ✓ URL extraction and threat analysis                       │
 │  ✓ Email authentication verification (SPF/DKIM/DMARC)       │
@@ -1373,4 +1373,4 @@ python -c "from app.parsing.mime_parser import MIMEParser; print('OK')"
 
 ---
 
-**Built with ❤️ by Sahil** | [GitHub](https://github.com/Sahil01010011/lazy_mail) | Last Updated: January 2025 | Version: 0.3.0
+**Built with ❤️ by Sahil** | [GitHub](https://github.com/Sahil01010011/lazy_mail) | Last Updated: October 2025 | Version: 0.3.0
